@@ -2,208 +2,115 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+  <div className="container">
+    <Head>
+        <title>Kamvelihle Gwijana</title>
       </Head>
-
+      
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+          <div id="top-section">
+                <h1 id="main-head">Hey, I'm Kamve!</h1>
+          </div>
+          
+          <div id="info-container">
+                <h1>About Me</h1>
+                <p>
+                My name is Kamvelihle Gwijana and I am from 
+                Queenstown, Eastern Cape South Africa.
+                I am a Full Stack Developer + Game Developer with a passion for learning new technologies and applying them practically.
+                I have used Flask, Django, Java, Python, HTML, CSS, Godot + GDScript and C# over the years at university and individually for work and side projects.
+                I have strong leadership qualities as I served as the chairman and club captain for the UWC Tennis Club and for the final year project I took the initiative to 
+                make sure the team stayed on track and met the constant deadlines. I work well with a team, I have good social skills and I am a practical learner.
+                </p>
+          </div>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+          <div id="work-container">
+              <div id="projects">
+                <h1>My Projects</h1>
+                <p>Projects here....</p>
+              </div>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+              <div id="interests">
+                <h1>My Interests</h1>
+                <p>Interests here....</p>
+              </div>
+          </div>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <footer>
+            <div id="bottom-info">
+              <h1>Why do I want to join SovTech?</h1>
+            </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          </footer>
+    </main>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      <style jsx>
+        {`
+        /*headers styling*/
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
+          #main-head{
+            font-size:42px;
           }
-        }
-      `}</style>
+          h1{
+            font-size: 27px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px;
+          }
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+        /*about me section styling*/
+        
+        #info-container{
+          position: relative;
+          margin: auto;
+          padding: 5px;
+          width: 70%;
+          height: 25%;
+
+          font-weight: medium;
         }
 
-        * {
-          box-sizing: border-box;
+        /*projects section styling*/
+
+        #work-container{
+          justify-content: center;
+          display: flex;
         }
-      `}</style>
+        #work-container h1 {
+          font-size: 25px;
+        }
+        #projects{
+          border: 1px solid red;
+          border-radius: 5px;
+          flex-basis: 500px;
+          height: 40vh;
+          margin: 2px;
+        }
+        #interests{
+          border: 1px solid red;
+          border-radius: 5px;
+          flex-basis: 500px;
+          height: 40vh;
+          margin: 2px;
+        }
+
+        /*bottom section styling*/
+
+        #bottom-info h1{
+          font-size: 27px;
+        }
+        
+        `}
+      </style>
+      <style jsx global>
+        {`
+        @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200');
+        body{
+              text-align: center;
+              font-family: 'Changa', sans-serif;
+              color: black;
+          }
+        `}
+      </style>
     </div>
   )
 }
