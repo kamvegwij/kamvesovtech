@@ -8,7 +8,7 @@ export default function Home() {
       </Head>
       
       <main>
-          <div id="top-section">
+          <div id="top-container">
                 <h1 id="main-head">Hey, I'm Kamve!</h1>
           </div>
           
@@ -35,12 +35,16 @@ export default function Home() {
                 <p>Interests here....</p>
               </div>
           </div>
-
-          <footer>
-            <div id="bottom-info">
+          <div id="bottom-info">
               <h1>Why do I want to join SovTech?</h1>
-            </div>
-
+              <p>I've spent the past 4/5 years learning different technologies and messing around with countless personal projects
+                and this has made me realise just how diverse this industry is and just how many options there are in terms of what
+                to master. Being in an environment with developers with more experience than me and developers that have been in the 
+                industry for a long time is very appealing as this will allow me to learn more and continue to hone my craft.
+              </p>
+          </div>
+          <footer>
+            <a href="https://github.com/kamvegwij">GitHub Profile</a>
           </footer>
     </main>
 
@@ -50,11 +54,16 @@ export default function Home() {
 
           #main-head{
             font-size:42px;
+            margin-left: 1em;
           }
           h1{
-            font-size: 27px;
+            font-size: 35px;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: 1px;
+          }
+          #top-container{
+            text-align: left;
+            
           }
 
         /*about me section styling*/
@@ -79,18 +88,27 @@ export default function Home() {
           font-size: 25px;
         }
         #projects{
-          border: 1px solid red;
+          box-shadow: 0px 0px 1px 1px white;
           border-radius: 5px;
-          flex-basis: 500px;
+          flex-basis: 450px;
           height: 40vh;
-          margin: 2px;
+          margin: 4px;
         }
+        #projects:hover{
+          box-shadow: 0px 0px 1px 2px black;
+          cursor: grab;
+        }
+
         #interests{
-          border: 1px solid red;
+          box-shadow: 0px 0px 1px 1px white;
           border-radius: 5px;
-          flex-basis: 500px;
+          flex-basis: 450px;
           height: 40vh;
-          margin: 2px;
+          margin: 4px;
+        }
+        #interests:hover{
+          box-shadow: 0px 0px 1px 2px black;
+          cursor: grab;
         }
 
         /*bottom section styling*/
@@ -98,16 +116,28 @@ export default function Home() {
         #bottom-info h1{
           font-size: 27px;
         }
+        #bottom-info{
+          position: relative;
+          margin: auto;
+          padding: 5px;
+          width: 50%;
+          height: 25%;
+        }
         
         `}
       </style>
       <style jsx global>
         {`
         @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200');
-        body{
+        main{
               text-align: center;
               font-family: 'Changa', sans-serif;
-              color: black;
+              color: white;
+              background-color: #5dabf4;
+          }
+          footer{
+            height: 13vh;
+            background-color: #bcbcbd;
           }
         `}
       </style>
