@@ -27,12 +27,23 @@ export default function Home() {
           <div id="work-container">
               <div id="projects">
                 <h1>My Projects</h1>
-                <p>Projects here....</p>
+
+                <h2>Hey Buddy - Top Down Adventure Game</h2>
+                <img src="bg3.png" height="200" width="200"></img>
+                <h2>Online Resume</h2>
+                <img src="bg3.png" height="200" width="200"></img>
+                <h2>Final Project 1 - Cinema Booking</h2>
+                <img src="bg3.png" height="200" width="200"></img>
+                <h2>Final Project 2 - Helpline Site</h2>
+                <img src="bg3.png" height="200" width="200"></img>
+                <h2>Educational Video Game</h2>
+                <img src="bg3.png" height="200" width="200"></img>
+
               </div>
 
-              <div id="interests">
-                <h1>My Interests</h1>
-                <p>Interests here....</p>
+              <div id="learned">
+                <h1>What Did I Learn From These?</h1>
+                <p>What I learned....</p>
               </div>
           </div>
           <div id="bottom-info">
@@ -90,23 +101,25 @@ export default function Home() {
         #projects{
           box-shadow: 0px 0px 1px 1px white;
           border-radius: 5px;
-          flex-basis: 450px;
-          height: 40vh;
+          flex-basis: 650px;
+          height: 50vh;
           margin: 4px;
+
+          overflow: scroll;
         }
         #projects:hover{
           box-shadow: 0px 0px 1px 2px black;
           cursor: grab;
         }
 
-        #interests{
+        #learned{
           box-shadow: 0px 0px 1px 1px white;
           border-radius: 5px;
           flex-basis: 450px;
-          height: 40vh;
+          height: 50vh;
           margin: 4px;
         }
-        #interests:hover{
+        #learned:hover{
           box-shadow: 0px 0px 1px 2px black;
           cursor: grab;
         }
