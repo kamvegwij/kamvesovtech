@@ -1,5 +1,4 @@
 # Software Development Assignment
-# Kamvelihle Gwijana
 <h2>What is this project?<h2>
 - The task given is to create a portfolio page using a React framework and deploy using any static site hosting.
 # What framework did I choose?
@@ -9,3 +8,8 @@
 -
 -
 Here's the link to the deployed version, Thank You!
+
+  <style>
+    h2 {
+    color: red;}
+  </style>
