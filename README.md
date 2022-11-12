@@ -1,1 +1,11 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Software Development Assignment
+# Kamvelihle Gwijana
+<h2>What is this project?<h2>
+- The task given is to create a portfolio page using a React framework and deploy using any static site hosting.
+# What framework did I choose?
+- I chose nextjs as my framework because as someone that enjoys learning new technologies, nextjs' fast rise in the world made me consider this as the first option.
+- The fairly large community and ease of development is also a pro in my opinion that makes this a great framework to learn.
+# How to bootstrap the project
+-
+-
+Here's the link to the deployed version, Thank You!
