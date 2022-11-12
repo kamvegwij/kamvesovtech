@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { createElement } from 'react'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       
       <main>
           <div id="top-container">
-                <h1 id="main-head">Hey, I'm Kamve!</h1>
+                <h1 id="main-head">Hey, I'm Kamve</h1><h2 id="excl_mark">!</h2>
           </div>
           
           <div id="info-container">
@@ -26,24 +27,29 @@ export default function Home() {
 
           <div id="work-container">
               <div id="projects">
+
+                <div id="proj-head">
                 <h1>My Projects</h1>
+                </div>
 
                 <h2>Hey Buddy - Top Down Adventure Game</h2>
-                <img src="bg3.png" height="200" width="200"></img>
-                <h2>Online Resume</h2>
-                <img src="bg3.png" height="200" width="200"></img>
-                <h2>Final Project 1 - Cinema Booking</h2>
-                <img src="bg3.png" height="200" width="200"></img>
-                <h2>Final Project 2 - Helpline Site</h2>
-                <img src="bg3.png" height="200" width="200"></img>
+                <img onclick="descriptionClick()" src="heybud.jpg" height="300" width="550" id="heybud"></img>
+                <h2>What's The Word Today?</h2>
+                <img onclick="descriptionClick()" src="word.jpg" height="300" width="550" id="word"></img>
+                <h2>Cinema Booking</h2>
+                <img onclick="descriptionClick()" src="akatsukicinema.jpg" height="300" width="550" id="cinema"></img>
+                <h2>QuickHelp</h2>
+                <img onclick="descriptionClick()" src="quickhelp.jpg" height="300" width="550" id="help"></img>
                 <h2>Educational Video Game</h2>
-                <img src="bg3.png" height="200" width="200"></img>
+                <img onclick="descriptionClick()" src="bg3.png" height="300" width="550" id="game"></img>
 
               </div>
 
-              <div id="learned">
-                <h1>What Did I Learn From These?</h1>
-                <p>What I learned....</p>
+              <div id="description">
+                <div id="descr-head">
+                  <h1>Description</h1>
+                </div>
+                  <p id="descriptions">Click on the projects to see description below:</p>
               </div>
           </div>
           <div id="bottom-info">
@@ -55,7 +61,8 @@ export default function Home() {
               </p>
           </div>
           <footer>
-            <a href="https://github.com/kamvegwij">GitHub Profile</a>
+            <p>Find more of my projects on my GitHub page</p>
+            <a href="https://github.com/kamvegwij">GitHub link</a>
           </footer>
     </main>
 
@@ -64,8 +71,23 @@ export default function Home() {
         /*headers styling*/
 
           #main-head{
-            font-size:42px;
+            font-size:52px;
             margin-left: 1em;
+            text-decoration: underline wavy #d3bb52;
+            text-underline-position: under;
+            display: inline;
+          }
+
+          #excl_mark{
+            font-size:51px;
+            display: inline-block;
+            margin-left: 0px;
+            text-decoration: none;
+
+            transform-origin: 0 0;
+            -webkit-animation-name: textanimate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
           }
           h1{
             font-size: 35px;
@@ -74,8 +96,8 @@ export default function Home() {
           }
           #top-container{
             text-align: left;
-            
           }
+          
 
         /*about me section styling*/
         
@@ -99,28 +121,44 @@ export default function Home() {
           font-size: 25px;
         }
         #projects{
-          box-shadow: 0px 0px 1px 1px white;
+          border: none;
           border-radius: 5px;
           flex-basis: 650px;
           height: 50vh;
           margin: 4px;
-
           overflow: scroll;
         }
         #projects:hover{
-          box-shadow: 0px 0px 1px 2px black;
           cursor: grab;
         }
-
-        #learned{
-          box-shadow: 0px 0px 1px 1px white;
+        #projects::-webkit-scrollbar{ /*hide scrollbars*/
+          display: none;
+        }
+        #proj-head{
+          position: sticky;
+          border-radius: 5px;
+          top: 0;
+          border: none;
+          background: linear-gradient(45deg,#f6f0db, #d3bb52);
+        }
+        #descr-head{
+          position: sticky;
+          border-radius: 5px;
+          top: 0;
+          border: none;
+          background: linear-gradient(45deg,#d3bb52, #f6f0db);
+        }
+        #description{
           border-radius: 5px;
           flex-basis: 450px;
           height: 50vh;
           margin: 4px;
+          overflow: scroll;
         }
-        #learned:hover{
-          box-shadow: 0px 0px 1px 2px black;
+        #description::-webkit-scrollbar{ /*hide scrollbars*/
+          display: none;
+        }
+        #description:hover{
           cursor: grab;
         }
 
@@ -134,7 +172,24 @@ export default function Home() {
           margin: auto;
           padding: 5px;
           width: 50%;
-          height: 25%;
+          height: 50%;
+        }
+
+        /*some animations of mine :) */
+        @keyframes textanimate{
+          
+          0% {transform: translateY(0px);
+              }
+          20% {transform: translateY(2px);
+              }
+          40% {transform: translateY(4px);
+          }
+          60% {transform: translateY(6px);
+          }
+          80% {transform: translateY(4px);
+          }
+          100%{transform: translateY(1px);
+          }         
         }
         
         `}
@@ -145,12 +200,15 @@ export default function Home() {
         main{
               text-align: center;
               font-family: 'Changa', sans-serif;
-              color: white;
-              background-color: #5dabf4;
+              color: black;
+              font-weight: bold;
+              background-color: #f6f0db;
           }
           footer{
-            height: 13vh;
-            background-color: #bcbcbd;
+            padding: 7px;
+            height: 20vh;
+            background-color: #d3bb52;
+
           }
         `}
       </style>
