@@ -2,6 +2,32 @@ import Head from 'next/head'
 import { createElement } from 'react'
 
 export default function Home() {
+
+  const itemClick = (e) => {
+    console.log(e.target);//test which item selected
+    //now for conditions to allow me to show the description for each project:
+    const para = document.getElementById("descriptions");
+
+    if (e.target.id == "heybud"){
+      para.innerHTML = `This is a short top-down adventure game I made using Godot and wrote in GDScript. 
+                        You begin in the characters farm, 
+                        his name Buddy, and are instructed to find his tools that have gone missing. Once every item is collected you are prompted
+                        to go to his house to then enter the next level. There is currently only one level.`;
+    }
+    else if (e.target.id == "word"){
+      para.innerHTML = "";
+    }
+    else if (e.target.id == "cinema"){
+      para.innerHTML = "";
+    }
+    else if (e.target.id == "help"){
+      para.innerHTML = "";
+    }
+    else if (e.target.id == "game"){
+      para.innerHTML = "";
+    }
+  }
+
   return (
   <div className="container">
     <Head>
@@ -10,7 +36,7 @@ export default function Home() {
       
       <main>
           <div id="top-container">
-                <h1 id="main-head">Hey, I'm Kamve</h1><h2 id="excl_mark">!</h2>
+                <h1 id="main-head">Hey, I'm Kamve!</h1>
           </div>
           
           <div id="info-container">
@@ -33,15 +59,15 @@ export default function Home() {
                 </div>
 
                 <h2>Hey Buddy - Top Down Adventure Game</h2>
-                <img onclick="descriptionClick()" src="heybud.jpg" height="300" width="550" id="heybud"></img>
+                <img src="heybud.jpg" height="300" width="550" id="heybud" onClick={itemClick}></img>
                 <h2>What's The Word Today?</h2>
-                <img onclick="descriptionClick()" src="word.jpg" height="300" width="550" id="word"></img>
+                <img src="word.jpg" height="300" width="550" id="word" onClick={itemClick}></img>
                 <h2>Cinema Booking</h2>
-                <img onclick="descriptionClick()" src="akatsukicinema.jpg" height="300" width="550" id="cinema"></img>
+                <img src="akatsukicinema.jpg" height="300" width="550" id="cinema" onClick={itemClick}></img>
                 <h2>QuickHelp</h2>
-                <img onclick="descriptionClick()" src="quickhelp.jpg" height="300" width="550" id="help"></img>
+                <img src="quickhelp.jpg" height="300" width="550" id="help" onClick={itemClick}></img>
                 <h2>Educational Video Game</h2>
-                <img onclick="descriptionClick()" src="bg3.png" height="300" width="550" id="game"></img>
+                <img src="bg3.png" height="300" width="550" id="game" onClick={itemClick}></img>
 
               </div>
 
@@ -69,25 +95,18 @@ export default function Home() {
       <style jsx>
         {`
         /*headers styling*/
-
+          #head-container{
+            border: 1px solid green;
+            width: 50%;
+          }
           #main-head{
             font-size:52px;
             margin-left: 1em;
             text-decoration: underline wavy #d3bb52;
             text-underline-position: under;
+            border-radius: 10px;
+            padding: 12px;
             display: inline;
-          }
-
-          #excl_mark{
-            font-size:51px;
-            display: inline-block;
-            margin-left: 0px;
-            text-decoration: none;
-
-            transform-origin: 0 0;
-            -webkit-animation-name: textanimate;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
           }
           h1{
             font-size: 35px;
@@ -107,7 +126,7 @@ export default function Home() {
           padding: 5px;
           width: 70%;
           height: 25%;
-
+          
           font-weight: medium;
         }
 
@@ -116,6 +135,8 @@ export default function Home() {
         #work-container{
           justify-content: center;
           display: flex;
+          background-color: #2d270b;
+          color: white;
         }
         #work-container h1 {
           font-size: 25px;
@@ -128,25 +149,29 @@ export default function Home() {
           margin: 4px;
           overflow: scroll;
         }
-        #projects:hover{
-          cursor: grab;
+        #projects::-webkit-scrollbar{
+          width: 12px;
         }
         #projects::-webkit-scrollbar{ /*hide scrollbars*/
           display: none;
         }
+        #projects:hover{
+          cursor: grab;
+        }
+        
         #proj-head{
           position: sticky;
           border-radius: 5px;
           top: 0;
           border: none;
-          background: linear-gradient(45deg,#f6f0db, #d3bb52);
+          background: linear-gradient(45deg,#544815, #2d270b);
         }
         #descr-head{
           position: sticky;
           border-radius: 5px;
           top: 0;
           border: none;
-          background: linear-gradient(45deg,#d3bb52, #f6f0db);
+          background: linear-gradient(45deg,#2d270b, #544815);
         }
         #description{
           border-radius: 5px;
@@ -157,9 +182,6 @@ export default function Home() {
         }
         #description::-webkit-scrollbar{ /*hide scrollbars*/
           display: none;
-        }
-        #description:hover{
-          cursor: grab;
         }
 
         /*bottom section styling*/
@@ -176,21 +198,6 @@ export default function Home() {
         }
 
         /*some animations of mine :) */
-        @keyframes textanimate{
-          
-          0% {transform: translateY(0px);
-              }
-          20% {transform: translateY(2px);
-              }
-          40% {transform: translateY(4px);
-          }
-          60% {transform: translateY(6px);
-          }
-          80% {transform: translateY(4px);
-          }
-          100%{transform: translateY(1px);
-          }         
-        }
         
         `}
       </style>
