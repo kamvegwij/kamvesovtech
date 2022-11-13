@@ -15,16 +15,24 @@ export default function Home() {
                         to go to his house to then enter the next level. There is currently only one level.`;
     }
     else if (e.target.id == "word"){
-      para.innerHTML = "";
+      para.innerHTML = `This is a simple single page web app with a main purpose of randomly displaying inspirational quotes to get your day going.
+                        I made use of the Type.fit API to fetch the quotes and I did some string manipulation in JavaScript to display
+                        this data in an aesthetic way.`;
     }
     else if (e.target.id == "cinema"){
-      para.innerHTML = "";
+      para.innerHTML = `This is one of the two final year projects in Computer Science and it is web app that allows a user to
+                        choose a featured movie, book a seat and also allow them to cancel the seat. This user data is then stored
+                        in a database for admin purposes. I worked mainly on backend in this project using Flask.`;
     }
     else if (e.target.id == "help"){
-      para.innerHTML = "";
+      para.innerHTML = `This is the last final year project and it is a web app that allows a user to login and have access to a page with helplines
+                        in which they can be immediately taken to a call with one or they can access the chatroom where they can have a one on one
+                        talk with a psychologist registered on our service. In this project I was a fullstack developer as I made the pages,
+                        flask implementation, API data fetching and some of the main interactions.`;
     }
     else if (e.target.id == "game"){
-      para.innerHTML = "";
+      para.innerHTML = `This is a project I am working on with a team for a company and I am a backend developer. We're using Godot and GDScript to
+                        make an educational video game.`;
     }
   }
 
@@ -36,21 +44,20 @@ export default function Home() {
       
       <main>
           <div id="top-container">
-                <h1 id="main-head">Hey, I'm Kamve!</h1>
-          </div>
+            <h1 id="main-head">Hey, I'm Kamve!</h1>
           
-          <div id="info-container">
-                <h1>About Me</h1>
-                <p>
-                My name is Kamvelihle Gwijana and I am from 
-                Queenstown, Eastern Cape South Africa.
-                I am a Full Stack Developer + Game Developer with a passion for learning new technologies and applying them practically.
-                I have used Flask, Django, Java, Python, HTML, CSS, Godot + GDScript and C# over the years at university and individually for work and side projects.
-                I have strong leadership qualities as I served as the chairman and club captain for the UWC Tennis Club and for the final year project I took the initiative to 
-                make sure the team stayed on track and met the constant deadlines. I work well with a team, I have good social skills and I am a practical learner.
-                </p>
+            <div id="info-container">
+                  <h1>About Me</h1>
+                  <p>
+                  My name is Kamvelihle Gwijana and I am from 
+                  Queenstown, Eastern Cape South Africa.
+                  I am a Full Stack Developer + Game Developer with a passion for learning new technologies and applying them practically.
+                  I have used Flask, Django, Java, Python, HTML, CSS, Godot + GDScript and C# over the years at university and individually for work and side projects.
+                  I have strong leadership qualities as I served as the chairman and club captain for the UWC Tennis Club and for the final year project I took the initiative to 
+                  make sure the team stayed on track and met the constant deadlines. I work well with a team, I have good social skills and I am a practical learner.
+                  </p>
+            </div>
           </div>
-
           <div id="work-container">
               <div id="projects">
 
@@ -60,14 +67,30 @@ export default function Home() {
 
                 <h2>Hey Buddy - Top Down Adventure Game</h2>
                 <img src="heybud.jpg" height="300" width="550" id="heybud" onClick={itemClick}></img>
+                <br></br><label id="add_info">Built with Godot and GDScript.</label>
+                <br></br><a href="https://github.com/kamvegwij/HeyBuddyProject">Source Code</a>
+                <br></br><a href="https://youtu.be/DEqJ1oXKJUI">Gameplay Runthrough</a>
+
                 <h2>What's The Word Today?</h2>
                 <img src="word.jpg" height="300" width="550" id="word" onClick={itemClick}></img>
+                <br></br><label id="add_info">Built with HTML, CSS, JavaScript, Flask, Type.fit API and deployed on Heroku.</label>
+                <br></br><a href="https://github.com/kamvegwij/WordOfTheDay">Source Code</a>
+                <br></br><a href="https://whatsthewordtoday.herokuapp.com/">Deployed Version</a>
+
                 <h2>Cinema Booking</h2>
                 <img src="akatsukicinema.jpg" height="300" width="550" id="cinema" onClick={itemClick}></img>
+                <br></br><label id="add_info">Built with HTML, CSS, JavaScript, Flask and SQL.</label>
+                <br></br><a href="https://github.com/kamvegwij/HeyBuddyProject">Source Code </a>
+
                 <h2>QuickHelp</h2>
                 <img src="quickhelp.jpg" height="300" width="550" id="help" onClick={itemClick}></img>
+                <br></br><label id="add_info">Built with HTML, CSS, JavaScript, Flask, SQL, Type.fit API, Twilio.</label>
+                <br></br><a href="https://github.com/kamvegwij/FINAL-CAPSTONE">Source Code</a>
+                <br></br><a href="https://myquickhelp.herokuapp.com/">Deployed Version </a>
+
                 <h2>Educational Video Game</h2>
                 <img src="bg3.png" height="300" width="550" id="game" onClick={itemClick}></img>
+                <br></br><label id="add_info">Built with Godot and GDScript.</label>
 
               </div>
 
@@ -78,14 +101,27 @@ export default function Home() {
                   <p id="descriptions">Click on the projects to see description below:</p>
               </div>
           </div>
+          <h1>Technologies I've Used</h1>
+          <div id="tech">
+            
+            <img src="pythonbg.png" id="tech_img"></img>
+            <img src="cssbg.png" id="tech_img"></img>
+            <img src="godot.png" id="tech_img"></img>
+            <img src="htmlbg.png" id="tech_img"></img>
+            <img src="javabg.png" id="tech_img"></img>
+            <img src="jsbg.png" id="tech_img"></img>
+            <img src="captivatebg.png" id="tech_img"></img>
+
+          </div>
+          <div id="bottom-container">
           <div id="bottom-info">
               <h1>Why do I want to join SovTech?</h1>
-              <p>I've spent the past 4/5 years learning different technologies and messing around with countless personal projects
-                and this has made me realise just how diverse this industry is and just how many options there are in terms of what
-                to master. Being in an environment with developers with more experience than me and developers that have been in the 
-                industry for a long time is very appealing as this will allow me to learn more and continue to hone my craft.
+              <p>I'm a young and enthusiastic developer and I'm ready to challenge myself by aquiring more skills and knowledge in the
+                 field of Software Development. Watching the video on the SovTech site, I would honoured to be in a work environment 
               </p>
           </div>
+          </div>
+
           <footer>
             <p>Find more of my projects on my GitHub page</p>
             <a href="https://github.com/kamvegwij">GitHub link</a>
@@ -95,12 +131,14 @@ export default function Home() {
       <style jsx>
         {`
         /*headers styling*/
-          #head-container{
-            border: 1px solid green;
-            width: 50%;
+          #top-container{
+            width: 100%;
+            background: linear-gradient(96deg, #2d270b 50%, #544815 50.1%);
+            color: white;
+            border-radius: 10px;
           }
           #main-head{
-            font-size:52px;
+            font-size:2em;
             margin-left: 1em;
             text-decoration: underline wavy #d3bb52;
             text-underline-position: under;
@@ -122,12 +160,13 @@ export default function Home() {
         
         #info-container{
           position: relative;
+          margin-top: 3em;
           margin: auto;
           padding: 5px;
           width: 70%;
           height: 25%;
-          
           font-weight: medium;
+          text-align: center;
         }
 
         /*projects section styling*/
@@ -135,8 +174,6 @@ export default function Home() {
         #work-container{
           justify-content: center;
           display: flex;
-          background-color: #2d270b;
-          color: white;
         }
         #work-container h1 {
           font-size: 25px;
@@ -158,20 +195,26 @@ export default function Home() {
         #projects:hover{
           cursor: grab;
         }
-        
+        #projects img {
+          width: 80%;
+          height: 70%;
+        }
         #proj-head{
+          width: 100%;
           position: sticky;
-          border-radius: 5px;
           top: 0;
           border: none;
-          background: linear-gradient(45deg,#544815, #2d270b);
+          background: linear-gradient(45deg,#544815, #e2d28c);
+        }
+        #add_info{
+          color: rgba(1, 0, 0, .4);
         }
         #descr-head{
+          width: 100%;
           position: sticky;
-          border-radius: 5px;
           top: 0;
           border: none;
-          background: linear-gradient(45deg,#2d270b, #544815);
+          background: linear-gradient(45deg,#e2d28c, #544815);
         }
         #description{
           border-radius: 5px;
@@ -184,15 +227,35 @@ export default function Home() {
           display: none;
         }
 
+        #tech {
+          padding: 20px;
+          width: 100%;
+          height: 15vh;
+        }
+        #tech #tech_img{
+          margin:.5em;
+          width: 5%;
+          height: 40%;
+          border-radius: 50%;
+        }
+
         /*bottom section styling*/
 
         #bottom-info h1{
           font-size: 27px;
         }
+        #bottom-container{
+          width: 100%;
+          background: linear-gradient(96deg, #544815 50%,#2d270b 50.1%);
+          color: white;
+        }
         #bottom-info{
+          
+
           position: relative;
+          margin-top: 2em;
           margin: auto;
-          padding: 5px;
+          padding: 3px;
           width: 50%;
           height: 50%;
         }
@@ -209,13 +272,13 @@ export default function Home() {
               font-family: 'Changa', sans-serif;
               color: black;
               font-weight: bold;
+              font-size: 100%;
               background-color: #f6f0db;
           }
           footer{
+            margin: auto;
             padding: 7px;
-            height: 20vh;
-            background-color: #d3bb52;
-
+            height: 15vh;
           }
         `}
       </style>
