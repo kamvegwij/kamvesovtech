@@ -211,7 +211,7 @@ export default function Home() {
             border-radius: 10px;
           }
           #main-head{
-            font-size:2.5em;
+            font-size:2.2em;
             letter-spacing: 3px;
             margin-left: 1em;
             text-decoration: underline wavy #d3bb52;
@@ -221,7 +221,7 @@ export default function Home() {
             display: inline;
           }
           h1{
-            font-size: 2em;
+            font-size: 1.8em;
             letter-spacing: 3px;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: 1px;
